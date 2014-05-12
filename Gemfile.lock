@@ -18,6 +18,11 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
+      nio4r (>= 0.5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -26,6 +31,7 @@ GEM
       addressable
     descriptive_statistics (1.1.4)
     execjs (2.0.2)
+    ffi (1.9.3)
     github-markdown (0.6.5)
     html-pipeline (1.8.0)
       activesupport (>= 2)
@@ -33,8 +39,14 @@ GEM
     htmlentities (4.3.1)
     i18n (0.6.9)
     json (1.8.1)
+    listen (2.7.4)
+      celluloid (>= 0.15.2)
+      celluloid-io (>= 0.15.0)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
     mini_portile (0.5.3)
     minitest (5.3.3)
+    nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nokogiri-styles (0.1.2)
@@ -48,6 +60,11 @@ GEM
       rack
     rack-protection (1.5.3)
       rack
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.4)
+      ffi (>= 0.5.0)
+    rerun (0.9.0)
+      listen (~> 2.7)
     reverse_markdown (0.5.1)
       nokogiri
     sinatra (1.4.5)
@@ -56,6 +73,7 @@ GEM
       tilt (~> 1.3, >= 1.3.4)
     thread_safe (0.3.3)
     tilt (1.4.1)
+    timers (1.1.0)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
 
@@ -66,5 +84,6 @@ DEPENDENCIES
   github-markdown
   html-pipeline
   rack-coffee
+  rerun
   sinatra
   word-to-markdown!

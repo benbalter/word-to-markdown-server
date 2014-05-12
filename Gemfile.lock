@@ -1,12 +1,12 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: e73e26b3b708ccf5e382ee39c1c9bdcf7097b1b1
+  revision: f5e367bcb723fcdc592fd93a4eaef043c4f53996
   specs:
     word-to-markdown (1.0.0)
-      descriptive_statistics (~> 1.1.3)
-      nokogiri-styles
-      premailer
-      reverse_markdown (~> 0.4.7)
+      descriptive_statistics (~> 1.1)
+      nokogiri-styles (~> 0.1)
+      premailer (~> 1.8)
+      reverse_markdown (~> 0.5)
 
 GEM
   remote: https://rubygems.org/
@@ -48,7 +48,7 @@ GEM
       rack
     rack-protection (1.5.3)
       rack
-    reverse_markdown (0.4.7)
+    reverse_markdown (0.5.1)
       nokogiri
     sinatra (1.4.5)
       rack (~> 1.4)

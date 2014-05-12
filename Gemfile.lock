@@ -1,8 +1,9 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 3059b3adcf6dd627a2ea7175745bb8c142493cfd
+  revision: dcf3e16cc5aa6e8d67818ac9d5b01d4d12310e2c
+  branch: soffice
   specs:
-    word-to-markdown (0.2.0)
+    word-to-markdown (1.0.0)
       descriptive_statistics (~> 1.1.3)
       nokogiri-styles
       premailer

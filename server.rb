@@ -20,7 +20,7 @@ module WordToMarkdownServer
     end
 
     post "/" do
-      unless params['doc'][:filename].match /docx?$/
+      unless params['doc'][:filename].match /docx?$/i
         error = "It looks like you tried to upload something other than a Word Document."
         render_template :index, { :error => error }
       end

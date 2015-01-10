@@ -4,7 +4,7 @@
   <div class="col-md-6">
     <h3>Markdown</h3>
     <div class="md-preview">
-      <pre><%= html_escape md %></pre>
+      <pre id="markdown"><%= html_escape md %></pre>
     </div>
   </div>
   <div class="col-md-6">
@@ -16,5 +16,9 @@
 </div>
 
 <div class="moar">
+  <button id="copy-button" class="btn" data-clipboard-target="markdown">Copy to clipboard</button>
   <p>Want to <a href="/">convert another document</a>?</p>
 </div>
+
+<script src="vendor/zeroclipboard/dist/ZeroClipboard.min.js"></script>
+<script>var client = new ZeroClipboard(document.getElementById("copy-button"));</script>

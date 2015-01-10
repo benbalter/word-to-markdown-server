@@ -31,10 +31,10 @@ module WordToMarkdownServer
 
     post "/raw" do
       file = Tempfile.new('word-to-markdown')
-      file.write request.env["rack.request.form_vars"]
-      WordToMarkdown.new(file.path).to_s
-      file.close
+      File.write file.path, request.env["rack.request.form_vars"]
+      markdown = WordToMarkdown.new(file.path).to_s
       file.unlink
+      markdown
     end
 
     def render_template(template, locals={})

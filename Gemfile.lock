@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 1d8073cb95f7dabc28f85c6aff55728989ea1d45
+  revision: 75221422059bdf77430c2f1dda492ee728b9c7ac
   specs:
     word-to-markdown (1.1.1)
       descriptive_statistics (~> 2.5)
@@ -17,24 +17,24 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
+    addressable (2.3.7)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
-    css_parser (1.3.5)
+    coffee-script-source (1.9.0)
+    css_parser (1.3.6)
       addressable
     descriptive_statistics (2.5.1)
-    execjs (2.2.2)
+    execjs (2.3.0)
     ffi (1.9.6)
     github-markdown (0.6.8)
     hitimes (1.2.2)
     html-pipeline (1.11.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
-    htmlentities (4.3.3)
+    htmlentities (4.3.1)
     i18n (0.7.0)
     json (1.8.2)
     listen (2.8.5)
@@ -43,13 +43,13 @@ GEM
       rb-inotify (>= 0.9)
     mini_portile (0.6.2)
     minitest (5.5.1)
-    nokogiri (1.6.5)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nokogiri-styles (0.1.2)
       nokogiri
-    premailer (1.8.2)
-      css_parser (>= 1.3.5)
-      htmlentities (>= 4.0.0)
+    premailer (1.8.3)
+      css_parser (>= 1.3.6)
+      htmlentities (>= 4.0.0, <= 4.3.1)
     rack (1.6.0)
     rack-coffee (1.0.3)
       coffee-script
@@ -61,7 +61,7 @@ GEM
       ffi (>= 0.5.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
-    reverse_markdown (0.6.0)
+    reverse_markdown (0.7.0)
       nokogiri
     sinatra (1.4.5)
       rack (~> 1.4)

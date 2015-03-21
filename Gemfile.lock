@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 75221422059bdf77430c2f1dda492ee728b9c7ac
+  revision: f80d7dfb8b4cdd2116219fba7ecf8dfe7b8870c1
   specs:
-    word-to-markdown (1.1.1)
+    word-to-markdown (1.1.2)
       descriptive_statistics (~> 2.5)
       nokogiri-styles (~> 0.1)
       premailer (~> 1.8)
@@ -11,7 +11,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.0)
+    activesupport (4.2.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -23,21 +23,21 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.0)
+    coffee-script-source (1.9.1)
     css_parser (1.3.6)
       addressable
     descriptive_statistics (2.5.1)
-    execjs (2.3.0)
-    ffi (1.9.6)
+    execjs (2.4.0)
+    ffi (1.9.8)
     github-markdown (0.6.8)
     hitimes (1.2.2)
     html-pipeline (1.11.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
-    htmlentities (4.3.1)
+    htmlentities (4.3.3)
     i18n (0.7.0)
     json (1.8.2)
-    listen (2.8.5)
+    listen (2.9.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -47,9 +47,9 @@ GEM
       mini_portile (~> 0.6.0)
     nokogiri-styles (0.1.2)
       nokogiri
-    premailer (1.8.3)
+    premailer (1.8.4)
       css_parser (>= 1.3.6)
-      htmlentities (>= 4.0.0, <= 4.3.1)
+      htmlentities (>= 4.0.0)
     rack (1.6.0)
     rack-coffee (1.0.3)
       coffee-script
@@ -67,7 +67,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    thread_safe (0.3.4)
+    thread_safe (0.3.5)
     tilt (1.4.1)
     timers (4.0.1)
       hitimes

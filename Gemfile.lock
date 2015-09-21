@@ -1,8 +1,9 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: fdcc48651734530d68c37726c5dab9611b5191a9
+  revision: 4060ad123913be92783150d96709a1532befed0d
   specs:
     word-to-markdown (1.1.4)
+      cliver (~> 0.3)
       descriptive_statistics (~> 2.5)
       nokogiri-styles (~> 0.1)
       premailer (~> 1.8)
@@ -21,6 +22,7 @@ GEM
     addressable (2.3.8)
     celluloid (0.16.1)
       timers (~> 4.0.0)
+    cliver (0.3.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs

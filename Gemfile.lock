@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: c807ce3d695122ad55999941f32d4ce2bf08c56e
+  revision: 6446bb3c1829e6f354fd69f5b23b849aab05d74d
   specs:
-    word-to-markdown (1.1.4)
+    word-to-markdown (1.1.5)
       cliver (~> 0.3)
       descriptive_statistics (~> 2.5)
       nokogiri-styles (~> 0.1)

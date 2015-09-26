@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 4060ad123913be92783150d96709a1532befed0d
+  revision: 29729e4c04e8e5eb0051db0a84355b36e01174ef
   specs:
     word-to-markdown (1.1.4)
       cliver (~> 0.3)
@@ -20,21 +20,21 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     cliver (0.3.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    css_parser (1.3.6)
+    css_parser (1.3.7)
       addressable
     descriptive_statistics (2.5.1)
     execjs (2.6.0)
     ffi (1.9.10)
     github-markdown (0.6.9)
     hitimes (1.2.3)
-    html-pipeline (2.0)
+    html-pipeline (2.1.0)
       activesupport (>= 2, < 5)
       nokogiri (>= 1.4, <= 1.6.5)
     htmlentities (4.3.4)
@@ -45,7 +45,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mini_portile (0.6.2)
-    minitest (5.8.0)
+    minitest (5.8.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nokogiri-styles (0.1.2)
@@ -88,3 +88,6 @@ DEPENDENCIES
   rerun
   sinatra
   word-to-markdown!
+
+BUNDLED WITH
+   1.10.6

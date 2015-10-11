@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 6446bb3c1829e6f354fd69f5b23b849aab05d74d
+  revision: 0631c15ed01bf51dd05faf1e7411349a99ad6817
   specs:
     word-to-markdown (1.1.5)
       cliver (~> 0.3)
@@ -20,8 +20,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    celluloid (0.16.0)
-      timers (~> 4.0.0)
     cliver (0.3.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -33,20 +31,18 @@ GEM
     execjs (2.6.0)
     ffi (1.9.10)
     github-markdown (0.6.9)
-    hitimes (1.2.3)
-    html-pipeline (2.1.0)
+    html-pipeline (2.2.1)
       activesupport (>= 2, < 5)
-      nokogiri (>= 1.4, <= 1.6.5)
+      nokogiri (>= 1.4)
     htmlentities (4.3.4)
     i18n (0.7.0)
     json (1.8.3)
-    listen (2.10.1)
-      celluloid (~> 0.16.0)
+    listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mini_portile (0.6.2)
     minitest (5.8.1)
-    nokogiri (1.6.5)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nokogiri-styles (0.1.2)
       nokogiri
@@ -62,8 +58,8 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rerun (0.10.0)
-      listen (~> 2.7, >= 2.7.3)
+    rerun (0.11.0)
+      listen (~> 3.0)
     reverse_markdown (0.8.2)
       nokogiri
     sinatra (1.4.6)
@@ -73,8 +69,6 @@ GEM
     sys-proctable (0.9.8)
     thread_safe (0.3.5)
     tilt (2.0.1)
-    timers (4.0.4)
-      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 

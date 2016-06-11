@@ -25,7 +25,7 @@ module WordToMarkdownServer
         render_template :index, { :error => error }
       end
       md = WordToMarkdown.new(params['doc'][:tempfile]).to_s
-      html = HTML::Pipeline::MarkdownFilter.new(md).call
+      html = HTML::Pipeline::MarkdownFilter.new(CGI.escapeHTML(md)).call
       render_template :display, { :md => md, :html => html, :filename => params['doc'][:filename].sub(/\.docx?$/,"") }
     end
 

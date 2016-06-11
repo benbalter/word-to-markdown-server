@@ -24,8 +24,8 @@ module WordToMarkdownServer
         error = "It looks like you tried to upload something other than a Word Document."
         render_template :index, { :error => error }
       end
-      md = WordToMarkdown.new(params['doc'][:tempfile]).to_s
-      html = HTML::Pipeline::MarkdownFilter.new(CGI.escapeHTML(md)).call
+      md = CGI.escapeHTML(WordToMarkdown.new(params['doc'][:tempfile]).to_s)
+      html = HTML::Pipeline::MarkdownFilter.new(md).call
       render_template :display, { :md => md, :html => html, :filename => params['doc'][:filename].sub(/\.docx?$/,"") }
     end
 

@@ -26,6 +26,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonmarker (0.17.9)
+      ruby-enum (~> 0.5)
     concurrent-ruby (1.0.5)
     css_parser (1.6.0)
       addressable
@@ -82,6 +84,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-enum (0.7.2)
+      i18n
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     sinatra (2.0.3)
@@ -101,6 +105,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  commonmarker
   github-markdown
   html-pipeline
   rack-coffee

@@ -10,6 +10,7 @@ gem 'rack-coffee'
 gem 'rerun'
 gem 'sinatra'
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
+gem 'commonmarker'
 
 group :development do
   gem 'rubocop'

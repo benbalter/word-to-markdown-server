@@ -9,7 +9,7 @@ gem 'html-pipeline'
 gem 'rack-coffee'
 gem 'rerun'
 gem 'sinatra'
-gem 'word-to-markdown', github: 'benbalter/word-to-markdown'
+gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
 
 group :development do
   gem 'rubocop'

@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/benbalter/word-to-markdown.git
+  remote: https://github.com/benbalter/word-to-markdown
   revision: 53a08e0442797492aebd78cb2c37abc62dd80e80
   specs:
     word-to-markdown (1.1.7)

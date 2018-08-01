@@ -1,6 +1,6 @@
 :repo:deb http://http.us.debian.org/debian stretch main
 
-libreoffice
+libreoffice-writer
 libxinerama-dev
 libgl1-mesa-dev
 libglu1-mesa-dev

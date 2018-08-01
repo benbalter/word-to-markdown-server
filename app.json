@@ -1,0 +1,30 @@
+{
+  "name": "word-to-markdown-demo",
+  "description": "A lightweight server implementation of Word-to-Markdown for converting Word Documents as a service.",
+  "scripts": {
+  },
+  "env": {
+    "LANG": "en_US.UTF-8",
+    "LC_ALL": "en_US.UTF-8",
+    "RACK_ENV": "production"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-java.git"
+    },
+    {
+      "url": "https://github.com/rishihahs/heroku-buildpack-libreoffice.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby.git"
+    }
+  ]
+}

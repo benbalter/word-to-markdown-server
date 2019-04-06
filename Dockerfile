@@ -18,7 +18,7 @@ RUN apt-get install -y --no-install-recommends \
     libsm6 \
     libice6
 
-run soffice --version
+RUN soffice --version
 
 # Nokogiri
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES 1

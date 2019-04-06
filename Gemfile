@@ -2,8 +2,6 @@
 
 source 'https://rubygems.org'
 
-ruby File.read('.ruby-version')
-
 gem 'commonmarker'
 gem 'github-markdown'
 gem 'html-pipeline'

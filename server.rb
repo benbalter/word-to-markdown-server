@@ -16,6 +16,18 @@ module WordToMarkdownServer
       def html_escape(text)
         Rack::Utils.escape_html(text)
       end
+
+      def title
+        "Word to Markdown Converter"
+      end
+
+      def description
+        "Convert Word or Google documents to Markdown online"
+      end
+
+      def url
+        "https://word-to-markdown.herokuapp.com"
+      end
     end
 
     use Rack::Coffee, root: 'public', urls: '/assets/javascripts'
@@ -25,7 +37,6 @@ module WordToMarkdownServer
     environment.append_path "assets/javascripts"
     environment.js_compressor  = :uglify
     environment.css_compressor = :scss
-
 
     get '/' do
       render_template :index, error: nil

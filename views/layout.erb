@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="/assets/style.css" rel="stylesheet">
 
-    <title>Word to Markdown Converter</title>
+    <title><%= title %></title>
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="<%= description %>" />
+    <meta property="og:description" content="<%= description %>" />
+    <link rel="canonical" href="<%= url %>" />
+    <meta property="og:url" content="<%= url %>" />
+    <meta property="og:site_name" content="<%= title %>" />
 
     <script async src="/assets/app.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138726319-1"></script>
@@ -20,7 +27,7 @@
   <body>
     <div class="container text-center mt-2">
 
-      <h1>Word to Markdown Converter</h1>
+      <h1 class="display-4"><%= title %></h1>
 
       <%= yield %>
 

@@ -73,8 +73,15 @@ module WordToMarkdownServer
     end
 
     post '/' do
+      unless params['doc'] && params['doc'][:filename]
+        error = 'You must upload a document to convert.'
+        status 400
+        render_template :index, error: error
+      end
+
       unless /docx?$/i.match?(params['doc'][:filename])
         error = 'It looks like you tried to upload something other than a Word Document.'
+        status 400
         render_template :index, error: error
       end
 
@@ -113,7 +120,7 @@ module WordToMarkdownServer
     end
 
     def render_html(markdown)
-      extensions = %i(table strikethrough)
+      extensions = %i[table strikethrough]
       CommonMarker.render_html(markdown, :DEFAULT, extensions)
     end
   end

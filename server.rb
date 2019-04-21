@@ -32,11 +32,11 @@ module WordToMarkdownServer
 
       def nav_links
         {
-          "Feedback" => "https://github.com/benbalter/word-to-markdown/blob/master/CONTRIBUTING.md",
-          "Source" => "https://github.com/benbalter/word-to-markdown",
-          "Terms" => "/terms/",
-          "Privacy" => "/privacy/",
-          "@benbalter" => "https://ben.balter.com",
+          'Feedback' => 'https://github.com/benbalter/word-to-markdown/blob/master/CONTRIBUTING.md',
+          'Source' => 'https://github.com/benbalter/word-to-markdown',
+          'Terms' => '/terms/',
+          'Privacy' => '/privacy/',
+          '@benbalter' => 'https://ben.balter.com'
         }
       end
     end
@@ -63,13 +63,13 @@ module WordToMarkdownServer
     get '/terms/' do
       md = doc_contents(:terms)
       html = HTML::Pipeline::MarkdownFilter.new(md).call
-      render_template :doc, { body: html, page_title: "Terms of Use" }
+      render_template :doc, body: html, page_title: 'Terms of Use'
     end
 
     get '/privacy/' do
       md = doc_contents(:privacy)
       html = HTML::Pipeline::MarkdownFilter.new(md).call
-      render_template :doc, { body: html, page_title: "Your privacy" }
+      render_template :doc, body: html, page_title: 'Your privacy'
     end
 
     post '/' do

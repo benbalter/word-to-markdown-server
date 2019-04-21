@@ -9,7 +9,6 @@ require 'uglifier'
 require 'sass'
 require 'bootstrap'
 require 'autoprefixer-rails'
-require 'rack/ssl-enforcer'
 require 'rack/host_redirect'
 
 module WordToMarkdownServer
@@ -31,8 +30,6 @@ module WordToMarkdownServer
         'https://word2md.com'
       end
     end
-
-    use Rack::SslEnforcer, only_environments: 'production'
 
     use Rack::HostRedirect,
         'word-to-markdown.herokuapp.com' => 'word2md.com'

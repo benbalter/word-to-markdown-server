@@ -10,6 +10,7 @@ require 'sass'
 require 'bootstrap'
 require 'autoprefixer-rails'
 require 'rack/ssl-enforcer'
+require 'rack/host_redirect'
 
 module WordToMarkdownServer
   class App < Sinatra::Base

@@ -14,6 +14,10 @@ You can also use it as a service by posting raw HTML to `/raw`, which will retur
 
 Deploy to Heroku
 
-## Some notes
+## Docker
 
-This requires a [multi-buildpack](https://github.com/ddollar/heroku-buildpack-multi) in order to install LibreOffice
+```
+docker build -t w2m .
+docker run -p 5000:5000 w2m
+open http://localhost:5000
+```

@@ -30,12 +30,15 @@ module WordToMarkdownServer
       end
     end
 
-    set :environment, Sprockets::Environment.new
-    environment.append_path "assets/stylesheets"
-    environment.append_path "assets/javascripts"
-    environment.js_compressor  = :uglify
-    environment.css_compressor = :scss
-    AutoprefixerRails.install(environment)
+    configure do
+      set :server, :puma unless development?
+      set :environment, Sprockets::Environment.new
+      environment.append_path "assets/stylesheets"
+      environment.append_path "assets/javascripts"
+      environment.js_compressor  = :uglify
+      environment.css_compressor = :scss
+      AutoprefixerRails.install(environment)
+    end
 
     get '/' do
       render_template :index, error: nil

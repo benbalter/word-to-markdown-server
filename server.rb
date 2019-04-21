@@ -18,26 +18,28 @@ module WordToMarkdownServer
       end
 
       def title
-        "Word to Markdown Converter"
+        'Word to Markdown Converter'
       end
 
       def description
-        "Convert Word or Google documents to Markdown online"
+        'Convert Word or Google documents to Markdown online'
       end
 
       def url
-        "https://word2md.com"
+        'https://word2md.com'
       end
     end
 
+    use Rack::HostRedirect,
+        'word-to-markdown.herokuapp.com' => 'word2md.com'
 
     configure do
       set :bind, '0.0.0.0'
-      set :port, (ENV["PORT"] || 5000)
+      set :port, (ENV['PORT'] || 5000)
       set :server, :puma unless development?
       set :environment, Sprockets::Environment.new
-      environment.append_path "assets/stylesheets"
-      environment.append_path "assets/javascripts"
+      environment.append_path 'assets/stylesheets'
+      environment.append_path 'assets/javascripts'
       environment.js_compressor  = :uglify
       environment.css_compressor = :scss
       AutoprefixerRails.install(environment)
@@ -65,8 +67,8 @@ module WordToMarkdownServer
       markdown
     end
 
-    get "/assets/*" do
-      env["PATH_INFO"].sub!("/assets", "")
+    get '/assets/*' do
+      env['PATH_INFO'].sub!('/assets', '')
       settings.environment.call(env)
     end
 

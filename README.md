@@ -1,5 +1,7 @@
 # Word-to-markdown Server
 
+[![Build Status](https://travis-ci.org/benbalter/word-to-markdown-server.svg?branch=master)](https://travis-ci.org/benbalter/word-to-markdown-server)
+
 This project contains a lightweight server implementation of [word-to-markdown](https://github.com/benbalter/word-to-markdown) for converting Word Documents as a service.
 
 To run the server, simply run `script/server` and open `localhost:9292` in your browser. The server can also be run on Heroku.

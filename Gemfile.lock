@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 09fd6d95ffd8867518480b7f67fb4bef049f0f2d
+  revision: 72a7bd91c81c0eedfbf1e871ebe262ac0330e030
   specs:
     word-to-markdown (1.1.8)
       cliver (~> 0.3)
@@ -52,10 +52,6 @@ GEM
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.10.0)
-    github-markdown (0.6.9)
-    html-pipeline (2.11.0)
-      activesupport (>= 2)
-      nokogiri (>= 1.4)
     htmlentities (4.3.4)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
@@ -169,8 +165,6 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap
   commonmarker
-  github-markdown
-  html-pipeline
   puma
   rack-host-redirect
   rerun

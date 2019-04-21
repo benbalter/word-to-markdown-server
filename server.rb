@@ -2,7 +2,7 @@
 
 require 'word-to-markdown'
 require 'sinatra'
-require 'html/pipeline'
+require 'commonmarker'
 require 'tempfile'
 require 'sprockets'
 require 'uglifier'
@@ -113,7 +113,8 @@ module WordToMarkdownServer
     end
 
     def render_html(markdown)
-      HTML::Pipeline::MarkdownFilter.new(markdown).call
+      extensions = %i(table strikethrough)
+      CommonMarker.render_html(markdown, :DEFAULT, extensions)
     end
   end
 end

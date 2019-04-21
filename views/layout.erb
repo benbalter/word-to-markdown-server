@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="/assets/style.css" rel="stylesheet">
 
-    <title><%= title %></title>
-    <meta property="og:title" content="<%= title %>" />
+    <title><%= site_title %></title>
+    <meta property="og:title" content="<%= site_title %>" />
     <meta property="og:locale" content="en_US" />
     <meta name="description" content="<%= description %>" />
     <meta property="og:description" content="<%= description %>" />
     <link rel="canonical" href="<%= url %>" />
     <meta property="og:url" content="<%= url %>" />
-    <meta property="og:site_name" content="<%= title %>" />
+    <meta property="og:site_name" content="<%= site_title %>" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138726319-1"></script>
     <script>
@@ -22,7 +22,7 @@
 
       gtag('config', 'UA-138726319-1');
     </script>
-    
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -34,14 +34,14 @@
   <body>
     <div class="container text-center mt-2">
 
-      <h1 class="display-4"><%= title %></h1>
+      <h1 class="display-4"><%= site_title %></h1>
 
       <%= yield %>
 
       <nav class="nav justify-content-center mt-2">
-        <a href="https://ben.balter.com" class="nav-link">@benbalter</a>
-        <a href="https://github.com/benbalter/word-to-markdown" class="nav-link">Source</a>
-        <a href="https://github.com/benbalter/word-to-markdown/blob/master/CONTRIBUTING.md" class="nav-link">Feedback</a>
+        <% nav_links.each do |label, url| %>
+          <a href="<%= url %>" class="nav-link"><%= label %></a>
+        <% end %>
       </nav>
     </div>
 

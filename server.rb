@@ -18,7 +18,7 @@ module WordToMarkdownServer
         Rack::Utils.escape_html(text)
       end
 
-      def title
+      def site_title
         'Word to Markdown Converter'
       end
 
@@ -28,6 +28,16 @@ module WordToMarkdownServer
 
       def url
         'https://word2md.com'
+      end
+
+      def nav_links
+        {
+          "Feedback" => "https://github.com/benbalter/word-to-markdown/blob/master/CONTRIBUTING.md",
+          "Source" => "https://github.com/benbalter/word-to-markdown",
+          "Terms" => "/terms/",
+          "Privacy" => "/privacy/",
+          "@benbalter" => "https://ben.balter.com",
+        }
       end
     end
 
@@ -48,6 +58,18 @@ module WordToMarkdownServer
 
     get '/' do
       render_template :index, error: nil
+    end
+
+    get '/terms/' do
+      md = doc_contents(:terms)
+      html = HTML::Pipeline::MarkdownFilter.new(md).call
+      render_template :doc, { body: html, page_title: "Terms of Use" }
+    end
+
+    get '/privacy/' do
+      md = doc_contents(:privacy)
+      html = HTML::Pipeline::MarkdownFilter.new(md).call
+      render_template :doc, { body: html, page_title: "Your privacy" }
     end
 
     post '/' do
@@ -77,6 +99,11 @@ module WordToMarkdownServer
 
     def render_template(template, locals = {})
       halt erb template, layout: :layout, locals: locals
+    end
+
+    def doc_contents(doc)
+      path = File.expand_path "./docs/#{doc}.md", __dir__
+      File.read(path)
     end
   end
 end

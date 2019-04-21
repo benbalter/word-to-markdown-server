@@ -1,24 +1,19 @@
 <h2>Results of converting "<%= filename %>"</h2>
 
-<div class="row">
-  <div class="col-md-6">
+<div class="row mt-3">
+  <div class="col-6">
     <h3>Markdown</h3>
-    <div class="md-preview">
-      <pre id="markdown"><%= html_escape md %></pre>
-    </div>
+    <pre class="bg-light border text-left p-2 pre-scrollable"><code id="markdown" class="force-select-all"><%= html_escape md %></code></pre>
   </div>
-  <div class="col-md-6">
+  <div class="col-6">
     <h3>Rendered</h3>
-    <div class="rendered-preview">
+    <div id="rendered" class="bg-light border text-left pre-scrollable">
       <%= html %>
     </div>
   </div>
 </div>
 
 <div class="moar">
-  <button id="copy-button" class="btn" data-clipboard-target="markdown">Copy to clipboard</button>
-  <p>Want to <a href="/">convert another document</a>?</p>
+  <button id="copy-button" type="button" class="btn btn-outline-primary" data-clipboard-target="#markdown">Copy markdown to clipboard</button>
+  <p class="mt-2">Want to <a href="/">convert another document</a>?</p>
 </div>
-
-<script src="vendor/zeroclipboard/dist/ZeroClipboard.min.js"></script>
-<script>var client = new ZeroClipboard(document.getElementById("copy-button"));</script>

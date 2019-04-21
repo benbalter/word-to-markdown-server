@@ -3,12 +3,12 @@
 require 'word-to-markdown'
 require 'sinatra'
 require 'html/pipeline'
-require 'rack/coffee'
 require 'tempfile'
 require 'sprockets'
 require 'uglifier'
 require 'sass'
 require 'bootstrap'
+require 'autoprefixer-rails'
 
 module WordToMarkdownServer
   class App < Sinatra::Base
@@ -30,13 +30,12 @@ module WordToMarkdownServer
       end
     end
 
-    use Rack::Coffee, root: 'public', urls: '/assets/javascripts'
-
     set :environment, Sprockets::Environment.new
     environment.append_path "assets/stylesheets"
     environment.append_path "assets/javascripts"
     environment.js_compressor  = :uglify
     environment.css_compressor = :scss
+    AutoprefixerRails.install(environment)
 
     get '/' do
       render_template :index, error: nil

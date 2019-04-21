@@ -1,20 +1,9 @@
 @import "bootstrap";
 
-.moar {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.md-preview, pre {
-  text-align: left;
-}
-
-.rendered-preview {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: left;
-}
-
 img {
   width: 100%;
+}
+
+.force-select-all {
+  user-select: all;
 }

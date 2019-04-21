@@ -11,6 +11,7 @@ gem 'sprockets'
 gem 'uglifier'
 gem 'sass'
 gem 'bootstrap'
+gem 'autoprefixer-rails'
 
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
 

@@ -10,7 +10,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "~3.4.0",
-    "zeroclipboard": "~2.3.0"
+    "clipboard": "~2.0.0"
   }
 }

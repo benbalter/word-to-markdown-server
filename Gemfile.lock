@@ -170,6 +170,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootstrap
   commonmarker
   github-markdown

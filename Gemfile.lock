@@ -91,6 +91,7 @@ GEM
       rack
     rack-protection (2.0.5)
       rack
+    rack-ssl-enforcer (0.2.9)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
@@ -173,6 +174,7 @@ DEPENDENCIES
   html-pipeline
   puma
   rack-host-redirect
+  rack-ssl-enforcer
   rerun
   rubocop
   sass

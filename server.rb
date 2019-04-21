@@ -30,7 +30,10 @@ module WordToMarkdownServer
       end
     end
 
+
     configure do
+      set :bind, '0.0.0.0'
+      set :port, (ENV["PORT"] || 5000)
       set :server, :puma unless development?
       set :environment, Sprockets::Environment.new
       environment.append_path "assets/stylesheets"

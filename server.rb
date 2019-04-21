@@ -5,6 +5,10 @@ require 'sinatra'
 require 'html/pipeline'
 require 'rack/coffee'
 require 'tempfile'
+require 'sprockets'
+require 'uglifier'
+require 'sass'
+require 'bootstrap'
 
 module WordToMarkdownServer
   class App < Sinatra::Base
@@ -15,6 +19,13 @@ module WordToMarkdownServer
     end
 
     use Rack::Coffee, root: 'public', urls: '/assets/javascripts'
+
+    set :environment, Sprockets::Environment.new
+    environment.append_path "assets/stylesheets"
+    environment.append_path "assets/javascripts"
+    environment.js_compressor  = :uglify
+    environment.css_compressor = :scss
+
 
     get '/' do
       render_template :index, error: nil
@@ -37,6 +48,13 @@ module WordToMarkdownServer
       file.unlink
       markdown
     end
+
+    get "/assets/*" do
+      env["PATH_INFO"].sub!("/assets", "")
+      settings.environment.call(env)
+    end
+
+    private
 
     def render_template(template, locals = {})
       halt erb template, layout: :layout, locals: locals

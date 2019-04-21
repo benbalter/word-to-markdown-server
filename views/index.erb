@@ -6,17 +6,16 @@
   </div>
 <% end %>
 
-<div class="row">
-  <div class="col-md-4">
+<div class="row mt-3">
+  <div class="col">
     <h3>Step 1</h3>
     <h4>Upload a <code>.docx</code> or <code>.doc</code> file</h4>
-    <p class="instructions">Drag-and-drop the file below to upload</p>
+    <p class="text-muted">Drag-and-drop the file below to upload</p>
   </div>
-  <div class="col-md-4">
+  <div class="col">
     <h3>Step 2</h3>
     <h4>Get back crisp, clean Markdown</h4>
-    <pre id="example-md">
-# H1
+    <pre class="bg-light border p-2 mt-3"><code># H1
 
 Paragraph
 
@@ -27,19 +26,17 @@ Paragraph
 ### H3
 
 Paragraph
-</pre>
-
-  <p class="instructions">Use it on <a href="https://github.com">GitHub</a> or elsewhere</p>
+</code></pre>
   </div>
 
-  <div class="col-md-4">
+  <div class="col">
     <h3>Step 3</h3>
     <h4>???</h4>
   </div>
 
 </div>
 
-<form class="form" method="POST" enctype="multipart/form-data" id="form">
-  <input type="file" class="file" name="doc" id="doc" value="FOO">
-  <input type="submit" class="btn btn-primary" value="Convert" id="submit">
+<form method="POST" enctype="multipart/form-data">
+  <input type="file" class="form-control-file p-2 border" name="doc" id="doc">
+  <input type="submit" class="btn btn-primary btn-lg mt-3" value="Convert" id="submit">
 </form>

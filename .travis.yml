@@ -1,0 +1,11 @@
+services:
+  - docker
+
+language: ruby
+
+install:
+  - docker build -t w2m .
+
+script:
+  - docker run w2m bundle exec rspec
+  - docker run w2m bundle exec rubocop

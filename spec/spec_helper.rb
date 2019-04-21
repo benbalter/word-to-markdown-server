@@ -13,6 +13,7 @@ RSpec.configure do |config|
 end
 
 ENV['RACK_ENV'] = 'test'
+Encoding.default_external = 'UTF-8'
 
 require File.expand_path '../server.rb', __dir__
 

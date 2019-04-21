@@ -10,7 +10,7 @@ You can also use it as a service by posting raw HTML to `/raw`, which will retur
 
 ## Usage
 
-  Visit [the site]((https://word2md.com), run it locally, or deploy to Heroku.
+  Visit [the site](https://word2md.com), run it locally, or deploy to Heroku.
 
 ## Docker
 

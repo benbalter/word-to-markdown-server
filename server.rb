@@ -26,7 +26,7 @@ module WordToMarkdownServer
       end
 
       def url
-        "https://word-to-markdown.herokuapp.com"
+        "https://word2md.com"
       end
     end
 

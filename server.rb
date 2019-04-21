@@ -61,14 +61,14 @@ module WordToMarkdownServer
     end
 
     get '/terms/' do
-      md = doc_contents(:terms)
-      html = HTML::Pipeline::MarkdownFilter.new(md).call
+      md   = doc_contents(:terms)
+      html = render_html(md)
       render_template :doc, body: html, page_title: 'Terms of Use'
     end
 
     get '/privacy/' do
-      md = doc_contents(:privacy)
-      html = HTML::Pipeline::MarkdownFilter.new(md).call
+      md   = doc_contents(:privacy)
+      html = render_html(md)
       render_template :doc, body: html, page_title: 'Your privacy'
     end
 
@@ -77,17 +77,17 @@ module WordToMarkdownServer
         error = 'It looks like you tried to upload something other than a Word Document.'
         render_template :index, error: error
       end
-      md = CGI.escapeHTML(WordToMarkdown.new(params['doc'][:tempfile]).to_s)
-      html = HTML::Pipeline::MarkdownFilter.new(md).call
+
+      md   = convert(params['doc'][:tempfile])
+      html = render_html(md)
+
       render_template :display, md: md, html: html, filename: params['doc'][:filename].sub(/\.docx?$/, '')
     end
 
     post '/raw' do
       file = Tempfile.new('word-to-markdown')
       File.write file.path, request.env['rack.request.form_vars']
-      markdown = WordToMarkdown.new(file.path).to_s
-      file.unlink
-      markdown
+      convert(file.path)
     end
 
     get '/assets/*' do
@@ -104,6 +104,16 @@ module WordToMarkdownServer
     def doc_contents(doc)
       path = File.expand_path "./docs/#{doc}.md", __dir__
       File.read(path)
+    end
+
+    def convert(file_path, unlink: true)
+      md = WordToMarkdown.new(file_path).to_s
+      File.unlink(file_path) if unlink
+      CGI.escapeHTML(md)
+    end
+
+    def render_html(markdown)
+      HTML::Pipeline::MarkdownFilter.new(markdown).call
     end
   end
 end

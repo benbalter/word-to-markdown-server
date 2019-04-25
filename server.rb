@@ -32,7 +32,7 @@ module WordToMarkdownServer
 
       def nav_links
         {
-          'Feedback' => 'https://github.com/benbalter/word-to-markdown/blob/master/CONTRIBUTING.md',
+          'Feedback' => 'https://github.com/benbalter/word-to-markdown/blob/master/docs/CONTRIBUTING.md',
           'Source' => 'https://github.com/benbalter/word-to-markdown',
           'Terms' => '/terms/',
           'Privacy' => '/privacy/',

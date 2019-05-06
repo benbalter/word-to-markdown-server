@@ -12,9 +12,11 @@ You can also use it as a service by posting raw HTML to `/raw`, which will retur
 
 ## Usage
 
-  Visit [the site](https://word2md.com), run it locally, or deploy to Heroku.
+Visit [the site](https://word2md.com), run it locally, or deploy to Heroku.
 
 ## Docker
+
+**NOTE:** When running Docker Windows Desktop make sure you are running the application in a Linux Container.
 
 ```
 docker build -t w2m .

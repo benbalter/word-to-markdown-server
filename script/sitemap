@@ -7,8 +7,8 @@ SitemapGenerator::Sitemap.verbose = true
 SitemapGenerator::Sitemap.compress = false
 
 SitemapGenerator::Sitemap.create do
-  add '/privacy'
-  add '/terms'
+  add '/privacy/'
+  add '/terms/'
 end
 
 SitemapGenerator::Sitemap.ping_search_engines

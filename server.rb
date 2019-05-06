@@ -46,6 +46,8 @@ module WordToMarkdownServer
         'word-to-markdown.herokuapp.com' => 'word2md.com'
 
     configure do
+      set :root, __dir__
+      set :static, true
       set :bind, '0.0.0.0'
       set :port, (ENV['PORT'] || 5000)
       set :server, :puma unless development?

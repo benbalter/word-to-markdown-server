@@ -34,6 +34,7 @@ module WordToMarkdownServer
         {
           'Feedback' => 'https://github.com/benbalter/word-to-markdown/blob/master/docs/CONTRIBUTING.md',
           'Source' => 'https://github.com/benbalter/word-to-markdown',
+          'Donate' => 'https://www.patreon.com/benbalter',
           'Terms' => '/terms/',
           'Privacy' => '/privacy/',
           '@benbalter' => 'https://ben.balter.com'

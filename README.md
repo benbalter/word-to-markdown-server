@@ -20,6 +20,6 @@ Visit [the site](https://word2md.com), run it locally, or deploy to Heroku.
 
 ```
 docker build -t w2m .
-docker run -p 5000:5000 w2m
-open http://localhost:5000
+docker run -p 3000:3000 w2m
+open http://localhost:3000
 ```

@@ -44,7 +44,7 @@ RSpec.describe WordToMarkdownServer::App do
 
     it 'errs' do
       post '/', doc: document
-      expect(last_response).to_not be_ok
+      expect(last_response).not_to be_ok
       expected = 'you tried to upload something other than a Word Document'
       expect(last_response.body).to include(expected)
     end
@@ -52,7 +52,7 @@ RSpec.describe WordToMarkdownServer::App do
 
   it 'errs with no doc' do
     post '/'
-    expect(last_response).to_not be_ok
+    expect(last_response).not_to be_ok
     expected = 'You must upload a document to convert'
     expect(last_response.body).to include(expected)
   end

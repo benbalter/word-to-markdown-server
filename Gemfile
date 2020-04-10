@@ -16,6 +16,8 @@ gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
 group :development do
   gem 'rerun'
   gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
   gem 'sitemap_generator'
 end
 

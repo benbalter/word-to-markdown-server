@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.6
 
 RUN bundle config --global frozen 1
 
@@ -18,6 +18,7 @@ RUN apt-get install -y --no-install-recommends libreoffice-writer
 RUN soffice --version
 
 COPY Gemfile Gemfile.lock ./
+RUN bundle config --local build.sassc --disable-march-tune-native
 RUN bundle install
 
 COPY . .

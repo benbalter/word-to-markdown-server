@@ -90,8 +90,9 @@ module WordToMarkdownServer
 
       md   = convert(params['doc'][:tempfile])
       html = render_html(md)
+      name = params['doc'][:filename].force_encoding('UTF-8').sub(/\.docx?$/, '')
 
-      render_template :display, md: md, html: html, filename: params['doc'][:filename].sub(/\.docx?$/, '')
+      render_template :display, md: md, html: html, filename: name
     end
 
     post '/raw' do

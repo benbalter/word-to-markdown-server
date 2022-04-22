@@ -33,3 +33,5 @@ jobs:
           push: true
           tags: |
             ghcr.io/user/app:latest
+          cache-from: type=registry,ref=user/app:latest
+          cache-to: type=inline

@@ -1,5 +1,5 @@
 services:
   word2md:
-    build: .
+    image: ghcr.io/benbalter/word-to-markdown-server:latest
     ports: 
       - 80:80

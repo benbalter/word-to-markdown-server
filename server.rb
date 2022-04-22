@@ -4,11 +4,6 @@ require 'word-to-markdown'
 require 'sinatra'
 require 'commonmarker'
 require 'tempfile'
-require 'sprockets'
-require 'uglifier'
-require 'sass'
-require 'bootstrap'
-require 'autoprefixer-rails'
 require 'rack/host_redirect'
 
 module WordToMarkdownServer
@@ -45,20 +40,14 @@ module WordToMarkdownServer
     use Rack::HostRedirect,
         'word-to-markdown.herokuapp.com' => 'word2md.com'
 
-    configure do
+    configure do      
       set :root, __dir__
       set :static, true
       set :bind, '0.0.0.0'
-      set :port, (ENV['PORT'] || 5000)
-      set :server, :puma unless development?
-      set :environment, Sprockets::Environment.new
-      environment.append_path 'assets/stylesheets'
-      environment.append_path 'assets/javascripts'
-      environment.js_compressor  = :uglify
-      environment.css_compressor = :scss
-      AutoprefixerRails.install(environment)
+      set :port, (ENV.fetch('PORT', nil) || 80)
+      set :server, :puma unless development?      
     end
-
+    
     get '/' do
       render_template :index, error: nil
     end
@@ -99,11 +88,6 @@ module WordToMarkdownServer
       file = Tempfile.new('word-to-markdown')
       File.write file.path, request.env['rack.request.form_vars']
       convert(file.path)
-    end
-
-    get '/assets/*' do
-      env['PATH_INFO'].sub!('/assets', '')
-      settings.environment.call(env)
     end
 
     private

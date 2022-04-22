@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-port        ENV['PORT']     || 80
-environment ENV['RACK_ENV'] || 'development'
+port        ENV.fetch('PORT', nil)     || 80
+environment ENV.fetch('RACK_ENV', nil) || 'development'

@@ -2,14 +2,9 @@
 
 source 'https://rubygems.org'
 
-gem 'autoprefixer-rails'
-gem 'bootstrap'
 gem 'commonmarker'
 gem 'rack-host-redirect'
-gem 'sass'
 gem 'sinatra'
-gem 'sprockets'
-gem 'uglifier'
 
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
 

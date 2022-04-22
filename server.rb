@@ -40,14 +40,14 @@ module WordToMarkdownServer
     use Rack::HostRedirect,
         'word-to-markdown.herokuapp.com' => 'word2md.com'
 
-    configure do      
+    configure do
       set :root, __dir__
       set :static, true
       set :bind, '0.0.0.0'
       set :port, (ENV.fetch('PORT', nil) || 80)
-      set :server, :puma unless development?      
+      set :server, :puma unless development?
     end
-    
+
     get '/' do
       render_template :index, error: nil
     end

@@ -1,0 +1,5 @@
+services:
+  word2md:
+    build: .
+    ports: 
+      - 80:80

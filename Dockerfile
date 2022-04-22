@@ -1,5 +1,7 @@
 FROM ruby:3.0
 
+ENV PORT=80
+EXPOSE ${PORT}
 RUN bundle config --global frozen 1
 
 WORKDIR /usr/src/app

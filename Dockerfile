@@ -1,6 +1,8 @@
 FROM ruby:3.0
 
 ENV PORT=80
+ENV RACK_ENV=production
+
 EXPOSE ${PORT}
 RUN bundle config --global frozen 1
 
@@ -8,15 +10,12 @@ WORKDIR /usr/src/app
 
 RUN apt-get update
 
-# Libre libreoffice
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:libreoffice/ppa
 RUN apt-get install -y --no-install-recommends libreoffice-writer
 
-RUN soffice --version
-
 COPY Gemfile Gemfile.lock ./
-RUN bundle install
+RUN bundle install --without="development test"
 
 COPY public/ ./public/
 COPY views/ ./views/

@@ -1,7 +1,2 @@
-#bower bloat
-public/vendor/bootstrap/grunt
-public/vendor/bootstrap/less
-public/vendor/bootstrap/test-infra
-public/vendor/bootstrap/fonts
-
-public/vendor/jquery/src
+.bundle
+node_modules

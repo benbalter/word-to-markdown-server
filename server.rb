@@ -39,7 +39,7 @@ module WordToMarkdownServer
     end
 
     use Rack::HostRedirect,
-        'word-to-markdown.herokuapp.com' => 'word2md.com'
+        'word2md.azurewebsites.net' => 'word2md.com'
 
     use Rack::ECG, checks: [
       [:static, { name: 'environment', value: Sinatra::Application.environment }],

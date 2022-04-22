@@ -16,9 +16,10 @@ RUN apt-get install -y --no-install-recommends libreoffice-writer
 RUN soffice --version
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle config --local build.sassc --disable-march-tune-native
 RUN bundle install
 
-COPY . .
+COPY public/ ./public/
+COPY views/ ./views/
+COPY config.ru puma.rb server.rb Procfile ./
 
 CMD ["bundle", "exec", "puma", "-C", "puma.rb"]

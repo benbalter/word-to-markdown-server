@@ -1,5 +1,6 @@
 services:
   word2md:
+    domainname: word2md
     image: ghcr.io/benbalter/word-to-markdown-server:main
     ports: 
       - 80:80

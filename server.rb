@@ -97,6 +97,11 @@ module WordToMarkdownServer
       convert(file.path)
     end
 
+    not_found do
+      status 404
+      'Not found'
+    end
+
     private
 
     def render_template(template, locals = {})

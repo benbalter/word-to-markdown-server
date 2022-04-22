@@ -5,6 +5,7 @@ require 'sinatra'
 require 'commonmarker'
 require 'tempfile'
 require 'rack/host_redirect'
+require 'rack/ecg'
 
 module WordToMarkdownServer
   class App < Sinatra::Base
@@ -39,6 +40,12 @@ module WordToMarkdownServer
 
     use Rack::HostRedirect,
         'word-to-markdown.herokuapp.com' => 'word2md.com'
+
+    use Rack::ECG, checks: [
+      [:static, { name: 'environment', value: Sinatra::Application.environment }],
+      [:static, { name: 'word-to-markdown', value: WordToMarkdown::VERSION }],
+      [:static, { name: 'soffice', value: WordToMarkdown.soffice.version, success: !WordToMarkdown.soffice.version.nil? }]
+    ]
 
     configure do
       set :root, __dir__

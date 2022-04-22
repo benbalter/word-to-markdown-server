@@ -4,3 +4,5 @@ services:
     image: ghcr.io/benbalter/word-to-markdown-server:main
     ports: 
       - 80:80
+    environment:
+      - RACK_ENV=production

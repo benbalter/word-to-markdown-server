@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 
 gem 'commonmarker'
+gem 'rack-ecg'
 gem 'rack-host-redirect'
 gem 'sinatra'
-
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
 
 group :development do

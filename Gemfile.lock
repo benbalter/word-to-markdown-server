@@ -49,6 +49,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-ecg (0.2.0)
+      rack
     rack-host-redirect (1.3.0)
       rack
     rack-protection (2.2.0)
@@ -114,6 +116,7 @@ PLATFORMS
 DEPENDENCIES
   commonmarker
   puma
+  rack-ecg
   rack-host-redirect
   rack-test
   rerun

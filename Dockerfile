@@ -19,6 +19,7 @@ RUN bundle install --without="development test"
 
 COPY public/ ./public/
 COPY views/ ./views/
+COPY docs/ ./docs/
 COPY config.ru puma.rb server.rb Procfile ./
 
 CMD ["bundle", "exec", "puma", "-C", "puma.rb"]

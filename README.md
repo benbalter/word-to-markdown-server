@@ -1,4 +1,4 @@
-# Word-to-markdown Server
+# Word-to-Markdown Server
 
 [![Build Status](https://travis-ci.org/benbalter/word-to-markdown-server.svg?branch=master)](https://travis-ci.org/benbalter/word-to-markdown-server)
 

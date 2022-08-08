@@ -7,6 +7,7 @@ gem 'rack-ecg'
 gem 'rack-host-redirect'
 gem 'sinatra'
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
+gem 'secure_headers'
 
 group :development do
   gem 'rerun'

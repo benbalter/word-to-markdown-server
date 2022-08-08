@@ -6,9 +6,15 @@ require 'commonmarker'
 require 'tempfile'
 require 'rack/host_redirect'
 require 'rack/ecg'
+require 'secure_headers'
+
+
 
 module WordToMarkdownServer
   class App < Sinatra::Base
+    use SecureHeaders::Middleware
+    SecureHeaders::Configuration.default
+    
     helpers do
       def html_escape(text)
         Rack::Utils.escape_html(text)

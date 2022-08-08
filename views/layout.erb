@@ -15,13 +15,13 @@
     <meta property="og:site_name" content="<%= site_title %>" />
   </head>
   <body>
-    <div class="container text-center mt-2">
+    <div class="container text-center">
 
       <h1 class="display-4"><a href="/" class="text-decoration-none text-body"><%= site_title %></a></h1>
 
       <%= yield %>
 
-      <nav class="nav justify-content-center">
+      <nav class="nav justify-content-center mt-2">
         <% nav_links.each do |label, url| %>
           <a href="<%= url %>" class="nav-link"><%= label %></a>
         <% end %>

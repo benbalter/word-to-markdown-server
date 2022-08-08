@@ -58,14 +58,14 @@ RSpec.describe WordToMarkdownServer::App do
   end
 
   it 'returns JS' do
-    get '/assets/app.js'
+    get '/main.js'
     expect(last_response).to be_ok
-    expected = 'new ClipboardJS("#copy-button")'
+    expected = '("#copy-button")'
     expect(last_response.body).to include(expected)
   end
 
   it 'returns css' do
-    get '/assets/style.css'
+    get '/main.css'
     expect(last_response).to be_ok
     expected = '-webkit-user-select:all'
     expect(last_response.body).to include(expected)

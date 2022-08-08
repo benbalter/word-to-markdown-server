@@ -120,7 +120,7 @@ module WordToMarkdownServer
     def convert(file_path, unlink: true)
       md = WordToMarkdown.new(file_path).to_s
       File.unlink(file_path) if unlink
-      CGI.escapeHTML(md)
+      md
     end
 
     def render_html(markdown)

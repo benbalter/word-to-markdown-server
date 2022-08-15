@@ -25,8 +25,19 @@ const config: webpack.Configuration = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                  ],
+                ],
+              },
+            },
+          },
           "sass-loader",
-          'postcss-loader',
         ],
       },
     ],

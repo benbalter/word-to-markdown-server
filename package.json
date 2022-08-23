@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/benbalter/word-to-markdown-server#readme",
   "devDependencies": {
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.18.13",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
     "bootstrap": "^5.2.0",

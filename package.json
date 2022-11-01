@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "autoprefixer": "^10.4.13",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.1",
     "bootstrap": "^5.2.2",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.1",

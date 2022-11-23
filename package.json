@@ -24,7 +24,7 @@
     "@babel/core": "^7.20.2",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.5",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "css-loader": "^6.7.2",
     "mini-css-extract-plugin": "^2.7.0",
     "postcss-loader": "^7.0.1",

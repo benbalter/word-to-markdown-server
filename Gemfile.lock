@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: 222ee1e1a00adc755cc6106fb825b82b58af71a0
+  revision: 51facdcc960266f2193b0099f676d6b24d6127df
   specs:
     word-to-markdown (1.1.8)
       cliver (~> 0.3)
@@ -13,13 +13,13 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     builder (3.2.4)
     cliver (0.3.2)
     commonmarker (0.23.6)
-    css_parser (1.11.0)
+    css_parser (1.12.0)
       addressable
     descriptive_statistics (2.5.1)
     diff-lcs (1.5.0)
@@ -41,11 +41,11 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    premailer (1.16.0)
+    premailer (1.18.0)
       addressable
-      css_parser (>= 1.6.0)
+      css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)
-    public_suffix (4.0.7)
+    public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -108,8 +108,8 @@ GEM
       tilt (~> 2.0)
     sitemap_generator (6.2.1)
       builder (~> 3.0)
-    sys-proctable (1.2.6)
-      ffi
+    sys-proctable (1.2.7)
+      ffi (~> 1.1)
     tilt (2.0.11)
     unicode-display_width (2.3.0)
 

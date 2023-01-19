@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'commonmarker'
+gem 'nokogiri', '>= 1.14'
 gem 'rack-ecg'
 gem 'rack-host-redirect'
 gem 'secure_headers'

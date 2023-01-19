@@ -15,7 +15,8 @@ RUN add-apt-repository ppa:libreoffice/ppa
 RUN apt-get install -y --no-install-recommends libreoffice-writer
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install --without="development test"
+RUN bundle config set --local without 'development test'
+RUN bundle install
 
 COPY public/ ./public/
 COPY views/ ./views/

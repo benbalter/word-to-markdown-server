@@ -121,6 +121,7 @@ PLATFORMS
 
 DEPENDENCIES
   commonmarker
+  nokogiri (>= 1.14)
   puma
   rack-ecg
   rack-host-redirect

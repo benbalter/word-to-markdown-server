@@ -8,6 +8,7 @@ gem 'rack-host-redirect'
 gem 'secure_headers'
 gem 'sinatra'
 gem 'word-to-markdown', git: 'https://github.com/benbalter/word-to-markdown'
+gem 'nokogiri', '>= 1.14'
 
 group :development do
   gem 'rerun'

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/benbalter/word-to-markdown
-  revision: ccf98a0de9a93cc88d620a32f300813fab600960
+  revision: 64b70ef6f60d0474841c321c8ef92784517e9ae6
   specs:
     word-to-markdown (1.1.8)
       cliver (~> 0.3)
@@ -41,7 +41,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
-    premailer (1.18.0)
+    premailer (1.19.0)
       addressable
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)

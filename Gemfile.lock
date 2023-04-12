@@ -54,7 +54,7 @@ GEM
       rack
     rack-host-redirect (1.3.0)
       rack
-    rack-protection (3.0.5)
+    rack-protection (3.0.6)
       rack
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -104,16 +104,16 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     secure_headers (6.5.0)
-    sinatra (3.0.5)
+    sinatra (3.0.6)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.0.5)
+      rack-protection (= 3.0.6)
       tilt (~> 2.0)
     sitemap_generator (6.3.0)
       builder (~> 3.0)
     sys-proctable (1.3.0)
       ffi (~> 1.1)
-    tilt (2.0.11)
+    tilt (2.1.0)
     unicode-display_width (2.4.2)
 
 PLATFORMS

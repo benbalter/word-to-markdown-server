@@ -18,7 +18,7 @@ GEM
     ast (2.4.2)
     builder (3.2.4)
     cliver (0.3.2)
-    commonmarker (0.23.8)
+    commonmarker (0.23.9)
     css_parser (1.14.0)
       addressable
     descriptive_statistics (2.5.1)

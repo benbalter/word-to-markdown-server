@@ -27,7 +27,7 @@
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.4",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss-loader": "^7.3.0",
+    "postcss-loader": "^7.3.2",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
     "style-loader": "^3.3.3",

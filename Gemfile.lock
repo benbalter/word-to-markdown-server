@@ -47,7 +47,7 @@ GEM
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)
     public_suffix (5.0.1)
-    puma (6.3.0)
+    puma (6.3.1)
       nio4r (~> 2.0)
     racc (1.7.0)
     rack (2.2.6.4)

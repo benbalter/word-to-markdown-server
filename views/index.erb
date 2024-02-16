@@ -37,7 +37,22 @@ Paragraph
 
 </div>
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" class="form">
+  <% if beta %>
+  <div class="row">
+    <div class="col align-self-center col-md-6 offset-md-3"> 
+      <div class="alert alert-primary" role="alert">
+        <div class="form-check" class="form-check-input">
+          <input type="checkbox" name="beta" checked="checked" id="beta">
+          <label for="beta" class="form-check-label"> 
+            I'd like to try the <strong>shiny, new</strong> beta version.
+            <a href="https://github.com/benbalter/word-to-markdown-js?tab=readme-ov-file#how-is-this-different-from-the-original">Learn more</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
   <input type="file" class="form-control-file p-2 border" name="doc" id="doc">
   <input type="submit" class="btn btn-primary btn-lg" value="Convert" id="submit">
 </form>

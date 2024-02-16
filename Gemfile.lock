@@ -23,15 +23,23 @@ GEM
       addressable
     descriptive_statistics (2.5.1)
     diff-lcs (1.5.0)
+    domain_name (0.6.20240107)
     ffi (1.15.5)
     htmlentities (4.3.4)
+    http-accept (1.7.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
     json (2.6.3)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    mime-types (3.5.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2024.0206)
     mini_portile2 (2.8.2)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    netrc (0.11.0)
     nio4r (2.5.9)
     nokogiri (1.15.2)
       mini_portile2 (~> 2.8.2)
@@ -66,6 +74,11 @@ GEM
     regexp_parser (2.8.1)
     rerun (0.14.0)
       listen (~> 3.0)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
@@ -131,6 +144,7 @@ DEPENDENCIES
   rack-host-redirect
   rack-test
   rerun
+  rest-client
   rspec
   rubocop
   rubocop-performance

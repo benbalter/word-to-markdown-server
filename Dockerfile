@@ -11,9 +11,9 @@ WORKDIR /usr/src/app
 
 RUN apt-get update
 
-RUN apt-get update -y 
+RUN apt update && apt upgrade
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:libreoffice/ppa
+RUN add-apt-repository ppa:libreoffice/ppa -y
 RUN apt-get install -y --no-install-recommends libreoffice-writer
 
 COPY Gemfile Gemfile.lock ./

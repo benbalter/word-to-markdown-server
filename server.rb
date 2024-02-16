@@ -7,6 +7,7 @@ require 'tempfile'
 require 'rack/host_redirect'
 require 'rack/ecg'
 require 'secure_headers'
+require 'rest_client'
 
 module WordToMarkdownServer
   class App < Sinatra::Base
@@ -60,7 +61,7 @@ module WordToMarkdownServer
     end
 
     get '/' do
-      render_template :index, error: nil
+      render_template :index, error: nil, beta: (ENV.fetch('BETA_SERVER', nil) != nil)
     end
 
     get '/terms/' do
@@ -88,7 +89,12 @@ module WordToMarkdownServer
         render_template :index, error: error
       end
 
-      md   = convert(params['doc'][:tempfile])
+      md = if ENV.fetch('BETA_SERVER', nil) && params['beta']
+             convert_beta(params['doc'][:tempfile])
+           else
+             convert(params['doc'][:tempfile])
+           end
+
       html = render_html(md)
       name = params['doc'][:filename].force_encoding('UTF-8').sub(/\.docx?$/, '')
 
@@ -115,6 +121,13 @@ module WordToMarkdownServer
     def doc_contents(doc)
       path = File.expand_path "./docs/#{doc}.md", __dir__
       File.read(path)
+    end
+
+    def convert_beta(file_path, unlink: true)
+      server = ENV.fetch('BETA_SERVER', nil)
+      response = RestClient.post("#{server}/raw", doc: File.new(file_path))
+      File.unlink(file_path) if unlink
+      response.body
     end
 
     def convert(file_path, unlink: true)

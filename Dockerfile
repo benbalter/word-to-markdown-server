@@ -2,6 +2,7 @@ FROM ruby:3.2.2
 
 ENV PORT=80
 ENV RACK_ENV=production
+ENV BETA_SERVER="https://beta.word2md.com"
 
 EXPOSE ${PORT}
 RUN bundle config --global frozen 1

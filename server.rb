@@ -77,16 +77,17 @@ module WordToMarkdownServer
     end
 
     post '/' do
+      beta = ENV.fetch('BETA_SERVER', nil)
       unless params['doc'] && params['doc'][:filename]
         error = 'You must upload a document to convert.'
         status 400
-        render_template :index, error: error
+        render_template :index, error: error, beta: (beta != nil)
       end
 
       unless /docx?$/i.match?(params['doc'][:filename])
         error = 'It looks like you tried to upload something other than a Word Document.'
         status 400
-        render_template :index, error: error
+        render_template :index, error: error, beta: (beta != nil)
       end
 
       md = if ENV.fetch('BETA_SERVER', nil) && params['beta']
@@ -98,7 +99,7 @@ module WordToMarkdownServer
       html = render_html(md)
       name = params['doc'][:filename].force_encoding('UTF-8').sub(/\.docx?$/, '')
 
-      render_template :display, md: md, html: html, filename: name
+      render_template :display, md: md, html: html, filename: name, beta: (beta != nil)
     end
 
     post '/raw' do

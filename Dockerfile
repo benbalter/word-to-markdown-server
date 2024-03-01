@@ -1,4 +1,4 @@
-FROM ruby:3.2-bullseye
+FROM ruby:3.3-bullseye
 
 ENV PORT=80
 ENV RACK_ENV=production

@@ -108,6 +108,30 @@ module WordToMarkdownServer
       convert(file.path)
     end
 
+    post '/md' do
+      unless params['doc'] && params['doc'][:filename]
+        error = 'You must upload a document to convert.'
+        status 400
+        render_template :index, error: error, beta: !beta.nil?
+      end
+
+      unless /docx?$/i.match?(params['doc'][:filename])
+        error = 'It looks like you tried to upload something other than a Word Document.'
+        status 400
+        render_template :index, error: error, beta: !beta.nil?
+      end
+
+      md = if ENV.fetch('BETA_SERVER', nil) && params['beta']
+             convert_beta(params['doc'][:tempfile])
+           else
+             convert(params['doc'][:tempfile])
+           end
+
+      # return md as markdown text
+      content_type 'text/markdown'
+      md
+    end
+
     not_found do
       status 404
       'Not found'
